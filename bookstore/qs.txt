@@ -1,0 +1,10 @@
+when using axios to get weather data it turns off a lot no data or can not get temp data
+book managment
+username and password
+belizadevelopers
+password:CI3Q3CsxsSoL8Bpc
+
+
+mongodb+srv://belizadevelopers:<password>@book-managment.qavymll.mongodb.net/?retryWrites=true&w=majority
+
+npm install mongodb

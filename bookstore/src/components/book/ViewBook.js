@@ -1,13 +1,13 @@
 import React from 'react';
 
 import BookList from './BookList';
+import BookTable from './BookTable';
 
 function ViewBook() {
 
   return (
     <div>
-      <h2>Book List</h2>
-    <BookList/>
+     <BookTable />
     </div>
   )
 }

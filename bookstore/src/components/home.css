@@ -54,6 +54,7 @@ p{
 .hero-left-arrow img{
     width: 20px;
     height:15px;
+    cursor: pointer;
 }
 .hero_right{
     /* flex:1; */
@@ -62,6 +63,12 @@ p{
     justify-content: center;
     padding:20px;
    
+}
+h6{
+    cursor: pointer;
+}
+.title-ny{
+    margin-top: -15px;
 }
 
 /* .hero_right img{

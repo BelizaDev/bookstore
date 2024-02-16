@@ -21,10 +21,16 @@ function Navbar() {
           </div>
           
         <ul className='nav-menu'>
-          <li onClick={() => {setMenu("shop")}}><Link to="/">Home</Link>{menu==="shop"? <hr/>:<></>}</li>
+          {/* <li onClick={() => {setMenu("shop")}}><Link to="/">Home</Link>{menu==="shop"? <hr/>:<></>}</li>
           <li onClick={() => {setMenu("books")}}><Link to="/addbook">Add-Book</Link> {menu==="books"? <hr/>:<></>} </li>
-          <li onClick={() => {setMenu("toys")}}><Link to="/viewbook">View-Book</Link> {menu==="toys"?<hr/>:<></>}</li>
+          <li onClick={() => {setMenu("toys")}}><Link to="/viewbook">View-Book</Link> {menu==="toys"?<hr/>:<></>}</li> */}
         
+        <li><Link to="/">Home</Link></li>
+          <li><Link to="/addbook">Add-Book</Link> </li>
+          <li><Link to="/viewbook">View-Book</Link></li>
+          <li><Link to="/nybestseller">NyBestSeller</Link></li>
+
+
         </ul>
         <div className='cart-login'>
           <button><Link to='/register'>SignUp</Link></button>

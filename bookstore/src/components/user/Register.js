@@ -1,10 +1,10 @@
 import React, { useState } from "react";
 import axios from "axios";
-
-
-
-
 import styled from "styled-components";
+
+const MainContainer = styled.div`
+background-image: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+`
 
  const StyledForm = styled.form`
   max-width: 400px;
@@ -87,6 +87,7 @@ const Register = () => {
       });
   };
   return (
+    <MainContainer>
     <StyledForm onSubmit={handleSubmit}>
       <StyledTitle>Register</StyledTitle>
       {/* {error && <ErrorMessage>{error}</ErrorMessage>}
@@ -126,6 +127,7 @@ const Register = () => {
       {/* Add other input fields as necessary */}
       <StyledButton type="submit">Register</StyledButton>
     </StyledForm>
+    </MainContainer>
   );
 };
 export default Register;

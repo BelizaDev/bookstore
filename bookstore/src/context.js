@@ -9,10 +9,17 @@ export const BookProvider = (props) => {
 
 
     const [book, setBook] = useState([])
+ const fetchBook = () => {
+    axios.get('http://localhost:8080/api/book/books')
+    .then(res => (setBook(res.data)) )
+    .catch(err => console.log(err))
+ }
+
     useEffect(()=> {
-      axios.get('http://localhost:8080/api/book/books')
-          .then(res => (setBook(res.data)) )
-          .catch(err => console.log(err))
+        fetchBook()
+    //   axios.get('http://localhost:8080/api/book/books')
+    //       .then(res => (setBook(res.data)) )
+    //       .catch(err => console.log(err))
     }, [])
 
 const [isAuthenticated, setIsAuthenticated] = useState(false);

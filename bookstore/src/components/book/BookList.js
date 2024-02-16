@@ -27,6 +27,7 @@ padding:5px;
 margin:5px;
 margin-left:20%;
 color:#ffffff;
+cursor:pointer;
 `
 
 function BookList() {
@@ -40,11 +41,12 @@ function BookList() {
 
             <div>
           <div key={bookItem._id}></div>
-          <Link to={`/book/${bookItem._id}`}><StyledImg width="150px" height="150px" src={bookItem.imageUrl} alt='book'/></Link>
+         <StyledImg width="150px" height="150px" src={bookItem.imageUrl} alt='book'/>
 
            <StyledPara>{bookItem.title}</StyledPara> 
            <StyledPara>${bookItem.price}</StyledPara>
-          {book? <StyledButton>View</StyledButton>:null}
+          {book?  <Link to={`/book/${bookItem._id}`}><StyledButton>View</StyledButton></Link>:null}
+          
            </div>
        ) })}
     </StyledDiv>

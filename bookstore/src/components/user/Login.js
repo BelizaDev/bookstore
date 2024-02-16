@@ -4,6 +4,14 @@ import styled from "styled-components";
 import { BookContext } from "../../context";
 import { useNavigate } from "react-router-dom";
 
+const MainContainer = styled.div`
+background-image: linear-gradient(180deg, #fde1ff, #e1ffea22 60%);
+`
+const StyledTitle = styled.h2`
+  text-align: center;
+  color: #333;
+`
+
 const Form = styled.form`
   max-width: 400px;
   margin: 50px auto;
@@ -11,6 +19,7 @@ const Form = styled.form`
   background-color: #f7f7f7;
   border-radius: 8px;
   box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  
 `;
 const Input = styled.input`
   width: 100%;
@@ -79,9 +88,10 @@ function Login() {
     };
   
     return (
-      <>
-        <h3>Login</h3>
+      <MainContainer>
+        
         <Form onSubmit={handleSubmit}>
+        <StyledTitle>Login</StyledTitle>
           {isLoginLoading && <p>Loading...</p>}
           {loginError && !isLoginLoading && (
             <ErrorMessage>Authentication faild. Please try agian.</ErrorMessage>
@@ -102,7 +112,7 @@ function Login() {
           />
           <Button type="submit">Login</Button>
         </Form>
-      </>
+      </MainContainer>
     );
   }
   
